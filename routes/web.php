@@ -91,6 +91,8 @@ Route::middleware('web')->group(function(){
       Route::post('/loginadmin',[UserCenter::class,'loginadmin']);
      Route::get('/dl',[UserCenter::class,'dl']);
      Route::get('/bvc',[UserCenter::class,'bvc']);
+
+     
       Route::get('/h/{lang}',function($lang){
         session()->put('lang',$lang);
         return redirect()->back();
